@@ -1,0 +1,26 @@
+<body class="clientes">
+  <h1>Registro de Empleados</h1>
+  <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-group">
+      <label for="FirstName">Nombre del empleado:</label>
+      <input id="FirstName" formControlName="FirstName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="LastName">Apellido:</label>
+      <input id="LastName" formControlName="LastName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="BirthDate">Año de nacimiento:</label>
+      <input id="BirthDate" formControlName="BirthDate" type="date" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="Photo">Foto:</label>
+      <input id="Photo" formControlName="Photo" type="file" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="Notes">Notas:</label>
+      <textarea id="Notes" formControlName="Notes" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+  </form>
+</body>

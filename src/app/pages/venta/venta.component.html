@@ -1,0 +1,58 @@
+<form [formGroup]="ventasForm" (ngSubmit)="onSubmit()" class="ventas-form">
+  <h1>Registro de Venta</h1>
+  <div class="ventas-container">
+    <div class="form-group">
+      <label for="customerid">Cliente:</label>
+      <select formControlName="customerid" id="customerid">
+        <option *ngFor="let cliente of clientes" [value]="cliente.customerid">{{ cliente.customername }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="employeeid">Empleado:</label>
+      <select formControlName="employeeid" id="employeeid">
+        <option *ngFor="let empleado of empleados" [value]="empleado.employeeid">{{ empleado.firstname }} {{ empleado.lastname }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="orderdate">Fecha de Orden:</label>
+      <input type="date" formControlName="orderdate" id="orderdate">
+    </div>
+
+    <div class="form-group">
+      <label for="shipperid">Transportista:</label>
+      <select formControlName="shipperid" id="shipperid">
+        <option *ngFor="let transportista of transportistas" [value]="transportista.shipperid">{{ transportista.shippername }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="productid">Producto:</label>
+      <select formControlName="productid" id="productid">
+        <option *ngFor="let producto of productos" [value]="producto.productid">{{ producto.productname }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="quantity">Cantidad:</label>
+      <input type="number" formControlName="quantity" id="quantity">
+    </div>
+
+    <button type="button" (click)="agregarProducto()" class="btn btn-add">Agregar Producto</button>
+
+    <div class="selected-products">
+      <h3>Productos Seleccionados</h3>
+      <ul>
+        <li *ngFor="let prod of selectedProducts">
+          {{ prod.productname }} - {{ prod.quantity }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="button-group">
+      <button type="submit" class="btn btn-submit">Finalizar Venta</button>
+      <button type="button" (click)="cancelarVenta()" class="btn btn-cancel">Cancelar Venta</button>
+    </div>
+  </div>
+</form>

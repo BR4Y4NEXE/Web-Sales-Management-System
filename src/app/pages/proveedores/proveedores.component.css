@@ -1,0 +1,60 @@
+:host {
+  display: block;
+  padding: 20px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  margin-top: 10px;
+  
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  align-self: flex-start; /* Alinea el botón a la izquierda */
+  margin-top: 20px;
+  padding: 5px 10px; /* Ajusta el tamaño del botón */
+  border: none;
+  border-radius: 5px;
+  background-color: #ff7e5f;
+  color: #fff;
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #feb47b;
+}
+
+div {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+div p {
+  margin: 0;
+}

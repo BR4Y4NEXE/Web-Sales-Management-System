@@ -1,0 +1,34 @@
+<body class="customers">
+  <h1>Registro de Clientes</h1>
+  <form [formGroup]="clientesForm" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-group">
+      <label for="customername">Nombre del Cliente</label>
+      <input id="customername" formControlName="customername" type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="contactname">Nombre del Contacto</label>
+      <input id="contactname" formControlName="contactname" type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="address">Dirección</label>
+      <input id="address" formControlName="address" type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="city">Ciudad</label>
+      <input id="city" formControlName="city" type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="postalcode">Código Postal</label>
+      <input id="postalcode" formControlName="postalcode" type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="country">País</label>
+      <input id="country" formControlName="country" type="text" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Registrar Cliente</button>
+  </form>
+
+  <div *ngIf="registroExitoso">
+    <p>Registro exitoso del cliente!</p>
+  </div>
+</body>
